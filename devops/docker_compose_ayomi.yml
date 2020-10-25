@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+
+  ayomi_test:
+    build:
+      context: ..
+      dockerfile: Dockerfile.ayomi
+    container_name: ayomi_test
+    environment:
+      # DJANGO
+      - FLASK_WINDOWS_PORT=5000
+      - FLASK_DEFAULT_PORT=5000
+      - FLASK_DEBUG_MODE=true
+      - FLASK_HOST=0.0.0.0
+      # LOGS
+      - LOG_VERBOSITY=true
+    volumes:
+      - ../:/app
+    ports:
+      - 5000:5000
+      
