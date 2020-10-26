@@ -5,12 +5,12 @@ services:
   ayomi_test:
     build:
       context: ..
-      dockerfile: Dockerfile.ayomi
+      dockerfile: devops/Dockerfile.ayomi
     container_name: ayomi_test
     environment:
       # DJANGO
-      - FLASK_WINDOWS_PORT=5000
-      - FLASK_DEFAULT_PORT=5000
+      - DJANGO_WINDOWS_PORT=5000
+      - DJANGO_DEFAULT_PORT=5000
       - FLASK_DEBUG_MODE=true
       - FLASK_HOST=0.0.0.0
       # LOGS
