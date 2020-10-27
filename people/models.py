@@ -7,3 +7,4 @@ class Person(models.Model):
     email = models.EmailField(blank=True)
     job_title = models.CharField(max_length=30, blank=True)
     bio = models.TextField(blank=True)
+    register_date = models.DateField(auto_now=True)

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+**people/login.html**
+
+{% block content %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-6">
+        {{ form.email|as_crispy_field }}
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-6">
+        <button class="btn btn-success">Login</button>
+          <br>
+          <br>
+          <p>New user ?</p>
+        <a href="person_create" class="btn btn-success">Register</a>
+      </div>
+    </div>
+  </form>
+{% endblock %}
